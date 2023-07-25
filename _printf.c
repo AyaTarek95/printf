@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
-* _printf - prints output
-* @format: format string
-* Return: length of string
-*/
+ * _printf - produces output
+ * @format: format string
+ * Description: call the get_print() function t
+ * Return: length
+ */
 int _printf(const char *format, ...)
 {
-	int (*pfn)(va_list, flags_t *);
+	int (*pfunc)(va_list, flags_t *);
 	const char *p;
 	va_list arguments;
 	flags_t flags = {0, 0, 0};
 
-	register it count = 0;
+	register int count = 0;
 
 	va_start(arguments, format);
 	if (!format || (format[0] == '%' && !format[1]))
@@ -35,12 +36,10 @@ int _printf(const char *format, ...)
 			count += (pfunc)
 				? pfunc(arguments, &flags)
 				: _printf("%%%c", *p);
-		}
-		else
+		} else
 			count += _putchar(*p);
 	}
 	_putchar(-1);
 	va_end(arguments);
 	return (count);
 }
-
