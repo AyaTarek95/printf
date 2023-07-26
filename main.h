@@ -3,10 +3,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * struct specifier - struct specifier
- * @valid: character.
- * @f: functions associated.
- *
+ * struct specifier - struct specif.
+ * @valid: char
+ * @f: function
  */
 typedef struct specifier
 {
@@ -21,4 +20,5 @@ int print_i(va_list args);
 int _putchar(char c);
 int print_percent(va_list args);
 int (*get_func(char x))(va_list args);
+
 #endif

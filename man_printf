@@ -1,8 +1,8 @@
-.\" Manpage for Our _Printf Project.
+.\" Manpage for Our _Printf Project
 .\"
-.TH man 1 "29 Jul 2019" "1.0" "_Printf Project man page"
+.TH man 1 "26 7 2023" "1.0" "_Printf Project man page"
 .SH NAME
-._Printf
+._Printf.c
 \- This function produces output according to a format.
 .SH SYNOPSIS
 #include "main.h"
@@ -16,7 +16,7 @@ The printf function prints numerical values or ASCII characters characters of th
 
 Return: The number of characters printed (excluding the null byte used to end output to string).
 
-Conversion specifiers: There are a many different conversion specifiers that can be used for various data types.
+Conversion specifiers: There is variuos different conversion specifiers that could be used for various data types.
 
 %c - print a single character.
 

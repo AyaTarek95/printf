@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_c - prints character
- * @args: character argument
- * Return: number of characters
+ * print_c - print the characters
+ * @args: cha argument
+ * Return: no. of chars
  */
 int print_c(va_list args)
 {
@@ -14,9 +14,9 @@ int print_c(va_list args)
 	return (_putchar(c));
 }
 /**
- * print_s - prints a string
- * @args: string  argument
- * Return: number of characters
+ * print_s - print a str
+ * @args: str arg
+ * Return: no. of chars
  */
 int print_s(va_list args)
 {
@@ -36,10 +36,9 @@ int print_s(va_list args)
 	return (count);
 }
 /**
- * print_percent - pass the percent sing
- * @args: string  argument
- * Return: return the percent sing
- *
+ * print_percent - pass percent sign
+ * @args: str  arg
+ * Return: percent sign
  */
 int print_percent(va_list args)
 {
@@ -54,8 +53,8 @@ int print_percent(va_list args)
 }
 
 /**
- * print_d - prints a decimal
- * @args: decimal argument
+ * print_d - print decimal
+ * @args: decimal arg
  * Return: counter
  */
 int print_d(va_list args)
@@ -66,13 +65,13 @@ int print_d(va_list args)
 
 	count = 0;
 	n = va_arg(args, int);
-		if (n < 0)
-		{
-			absolute = (n * -1);
-			count += _putchar('-');
-		}
-		else
-			absolute = n;
+if (n < 0)
+{
+absolute = (n * -1);
+	count += _putchar('-');
+}
+	else
+	absolute = n;
 
 	aux = absolute;
 	countnum = 1;
@@ -81,17 +80,17 @@ int print_d(va_list args)
 		aux /= 10;
 		countnum *= 10;
 	}
-	while (countnum >= 1)
-	{
-		count += _putchar(((absolute / countnum) % 10) + '0');
-		countnum /= 10;
-	}
+while (countnum >= 1)
+{
+	count += _putchar(((absolute / countnum) % 10) + '0');
+	countnum /= 10;
+}
 	return (count);
 }
 /**
- * print_i - prints integer
- * @args: integer argument
- * Return: the decimal function
+ * print_i - prints int
+ * @args: int arg
+ * Return: decimal function
  */
 
 int print_i(va_list args)

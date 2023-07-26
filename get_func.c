@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * get_func - look for the specifier
- * @x: variable to the function
- * Return: function
+ * get_func - look for specifier
+ * @x: variable of func
+ * Return: fun
  */
 int (*get_func(char x))(va_list)
 {
@@ -16,11 +16,11 @@ int (*get_func(char x))(va_list)
 		{"i", print_i},
 		{NULL, NULL}
 	};
-	while (arr[i].valid)
-	{
-		if (x == arr[i].valid[0])
-			return (arr[i].f);
-		i++;
-	}
+while (arr[i].valid)
+{
+if (x == arr[i].valid[0])
+	return (arr[i].f);
+	i++;
+}
 	return (NULL);
 }
